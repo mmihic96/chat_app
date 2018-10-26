@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var username = localStorage.getItem('username');
+
+        if (!username) {
+            window.location.href = "/pages/identify.html";
+        }
+    </script>
+    <meta charset="utf-8" />
+    <title>Web client</title>
+    <link rel="stylesheet" type="text/css" href="./style/index.style.css" />
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="./scripts/index.script.js" defer></script>
+</head>
+
+<body>
+    <h1>Welcome
+        <span id="welcome"></span> to chat application.</h1>
+    <div id="chatBox" class="chatBox">
+
+    </div>
+    <input id="message" type="text" placeholder="Enter your message">
+    <button id="sendMsgBtn" onclick="sendMessage()">Send message</button>
+    <br>
+</body>
+
+</html>

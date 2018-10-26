@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var username = localStorage.getItem('username');
+        if (username) {
+            window.location.href = "/";
+        }
+    </script>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/identify.syle.css" />
+    <script src="../scripts/identify.script.js" defer></script>
+</head>
+
+<body>
+    <h3>Please enter your username to access simple chat application:</h3>
+    <div>
+        <input type="text" id="username" name="firstname" placeholder="Your name..">
+        <button class="button" id="submitBtn" onclick="identify()">Submit</button>
+    </div>
+</body>
+
+</html>
